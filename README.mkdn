@@ -1,36 +1,40 @@
-LineageOS
-===========
+nasgorOS
+========
+
+nasgorOS is an Android distribution based on [LineageOS](https://lineageos.org).
+
+Branch `17.0` is based on LineageOS `lineage-24.0` (Android 17).
 
 Getting started
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
-
-To initialize your local repository using the LineageOS trees, use a command like this:
+To initialize your local repository using the nasgorOS trees:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+repo init -u https://github.com/nasgoros/android.git -b 17.0 --git-lfs
 ```
-Then to sync up:
+
+Add your device manifest, for example the Redmi Note 9 (merlinx):
 ```
-repo sync
+mkdir -p .repo/local_manifests
+cp .repo/manifests/local_manifests/merlinx.xml .repo/local_manifests/
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
+Then sync up:
+```
+repo sync -c -j8 --no-clone-bundle --no-tags
+```
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
-
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
-
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
-
-
-Buildbot
+Building
 --------
+```
+source build/envsetup.sh
+breakfast merlinx
+mka nasgoros
+```
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+The result is `out/target/product/merlinx/nasgorOS-<version>.zip`.
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+Credits
+-------
+nasgorOS is built on the work of the [LineageOS](https://github.com/LineageOS) project
+and its device maintainers, and uses proprietary blobs from [TheMuppets](https://github.com/TheMuppets).

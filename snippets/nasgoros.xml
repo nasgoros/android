@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- nasgorOS additions -->
+  <project path="vendor/nasgoros" name="nasgoros/android_vendor_nasgoros" revision="refs/heads/17.0" >
+    <linkfile src="product.mk" dest="vendor/extra/product.mk" />
+  </project>
+
+</manifest>
