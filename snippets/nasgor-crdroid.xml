@@ -69,4 +69,7 @@
   <!-- Keep Lineage overlays; patches remove duplicate addon font modules. -->
   <remove-project name="LineageOS/android_packages_overlays_Lineage" path="packages/overlays/Lineage" />
   <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" remote="nasgor-crdroid" revision="9e5784b30e406feca0b424ce2adda39adacc1612" upstream="refs/heads/lineage-24.0" />
+  <remove-project name="LineageOS/android_packages_apps_WallpaperPicker2" path="packages/apps/WallpaperPicker2" />
+  <!-- Keep the Lineage wallpaper app with the crDroid shared-settings interface adaptation. -->
+  <project path="packages/apps/WallpaperPicker2" name="LineageOS/android_packages_apps_WallpaperPicker2" remote="nasgor-crdroid" revision="faf11f2e8e1e36b07e3163831d34190ab7187265" upstream="refs/heads/lineage-24.0" />
 </manifest>
