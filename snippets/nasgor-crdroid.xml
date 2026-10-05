@@ -4,6 +4,12 @@
   <remote name="nasgor-crdroid" fetch="https://github.com/" />
   <remote name="nasgor-crdroid-gitlab" fetch="https://gitlab.com/" />
 
+  <remove-project name="LineageOS/android_frameworks_av" path="frameworks/av" />
+  <!-- Per-app audio volume backend and camera/TIFF extensions used by frameworks/base -->
+  <project path="frameworks/av" name="crdroidandroid/android_frameworks_av" remote="nasgor-crdroid" revision="9bc64d559bcfb2f7992c68cc93fd41f15fee9936" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_system_core" path="system/core" />
+  <!-- Matching camera_face layout and camera command definitions -->
+  <project path="system/core" name="crdroidandroid/android_system_core" remote="nasgor-crdroid" revision="2c9ddae76941b3912e06120ba40c345a11ce3dec" upstream="refs/heads/17.0" />
   <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
   <!-- Framework APIs, SystemUI and settings consumers -->
   <project path="frameworks/base" name="crdroidandroid/android_frameworks_base" remote="nasgor-crdroid" revision="eec891c4885cf956e56796b989d229df8fb850c3" upstream="refs/heads/17.0" />
