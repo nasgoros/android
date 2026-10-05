@@ -2,10 +2,13 @@
 <manifest>
   <!-- Android 17 crDroid Settings dependencies; launcher and ordinary apps remain LineageOS. -->
   <remote name="nasgor-crdroid" fetch="https://github.com/" />
+  <remote name="nasgor-crdroid-gitlab" fetch="https://gitlab.com/" />
 
   <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
   <!-- Framework APIs, SystemUI and settings consumers -->
   <project path="frameworks/base" name="crdroidandroid/android_frameworks_base" remote="nasgor-crdroid" revision="eec891c4885cf956e56796b989d229df8fb850c3" upstream="refs/heads/17.0" />
+  <!-- FaceSense AIDL (vendor.aospa.biometrics.face) required by crDroid frameworks/base -->
+  <project path="packages/apps/FaceUnlock" name="crdroidandroid/android_packages_apps_FaceUnlock" remote="nasgor-crdroid-gitlab" revision="a4cef893b8d07e30dfe4752bd8149b133f0cb196" upstream="refs/heads/17.0" />
   <remove-project name="LineageOS/android_frameworks_native" path="frameworks/native" />
   <!-- Native display, sensor and input consumers -->
   <project path="frameworks/native" name="crdroidandroid/android_frameworks_native" remote="nasgor-crdroid" revision="1210cd4125a0f0cd6f4cb98aeaa6f1f10c50900a" upstream="refs/heads/17.0" />
