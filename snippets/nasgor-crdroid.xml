@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Android 17 crDroid Settings dependencies; launcher and ordinary apps remain LineageOS. -->
+  <remote name="nasgor-crdroid" fetch="https://github.com/" />
+
+  <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
+  <!-- Framework APIs, SystemUI and settings consumers -->
+  <project path="frameworks/base" name="crdroidandroid/android_frameworks_base" remote="nasgor-crdroid" revision="eec891c4885cf956e56796b989d229df8fb850c3" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_frameworks_native" path="frameworks/native" />
+  <!-- Native display, sensor and input consumers -->
+  <project path="frameworks/native" name="crdroidandroid/android_frameworks_native" remote="nasgor-crdroid" revision="1210cd4125a0f0cd6f4cb98aeaa6f1f10c50900a" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_frameworks_libs_systemui" path="frameworks/libs/systemui" />
+  <!-- Shared SystemUI libraries and clocks -->
+  <project path="frameworks/libs/systemui" name="crdroidandroid/android_frameworks_libs_systemui" remote="nasgor-crdroid" revision="65eb5d7c1874e93205881b8861af6a1e516ee0d5" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
+  <!-- Telephony preferences backend -->
+  <project path="frameworks/opt/telephony" name="crdroidandroid/android_frameworks_opt_telephony" remote="nasgor-crdroid" revision="be8063a7b62aaf89d7da33300a931570bcc14e0a" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_lineage-sdk" path="lineage-sdk" />
+  <!-- Settings provider keys and preference support -->
+  <project path="lineage-sdk" name="crdroidandroid/android_lineage-sdk" remote="nasgor-crdroid" revision="0f6ea41610cb9e0443ad2715c7e0959c65f3d7ea" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" path="packages/apps/Settings" />
+  <!-- Settings host for crDroid fragments -->
+  <project path="packages/apps/Settings" name="crdroidandroid/android_packages_apps_Settings" remote="nasgor-crdroid" revision="799904691b9a00e18b61cdd73c1f3b6d27a92ef6" upstream="refs/heads/17.0" />
+  <!-- Complete upstream customization screens -->
+  <project path="packages/apps/crDroidSettings" name="crdroidandroid/android_packages_apps_crDroidSettings" remote="nasgor-crdroid" revision="0c8bcceebab0350cb6a998a2266473695f6d836d" upstream="refs/heads/17.0" />
+  <!-- Game mode settings dependency -->
+  <project path="packages/apps/GameSpace" name="crdroidandroid/android_packages_apps_GameSpace" remote="nasgor-crdroid" revision="3e325db0f30a219e6b1294de47cc4ad5481c3fb7" upstream="refs/heads/17.0" />
+  <!-- Quick Settings header image choices -->
+  <project path="packages/apps/OmniStyle" name="crdroidandroid/android_packages_apps_OmniStyle" remote="nasgor-crdroid" revision="15432cf870458b15259312b6e4c27c3e194a9939" upstream="refs/heads/17.0" />
+  <!-- Theme selection settings dependency -->
+  <project path="packages/apps/ThemeStore" name="crdroidandroid/android_packages_apps_ThemeStore" remote="nasgor-crdroid" revision="2bc5b64cf95bd65a1175dc998ff027862649b8ea" upstream="refs/heads/17.0" />
+  <!-- Sidebar and freeform settings dependency -->
+  <project path="packages/apps/LMOFreeform" name="crdroidandroid/android_packages_apps_LMOFreeform" remote="nasgor-crdroid" revision="246622d65e29c1d3e5fa0e221b6f0926a6990343" upstream="refs/heads/17.0" />
+  <!-- App sandbox framework service and settings -->
+  <project path="packages/apps/Sandbox" name="crdroidandroid/android_packages_apps_Sandbox" remote="nasgor-crdroid" revision="149b72cbe1409501cb104f6e4e20e5ae316596f9" upstream="refs/heads/17.0" />
+  <!-- Lockscreen smartspace dependency -->
+  <project path="packages/services/QuickLook" name="crdroidandroid/android_packages_services_QuickLook" remote="nasgor-crdroid" revision="dda4e5a58d6f987abb3c19a7e73c639f02412d6a" upstream="refs/heads/17.0" />
+  <!-- Weather settings provider -->
+  <project path="packages/services/OmniJaws" name="crdroidandroid/android_packages_services_OmniJaws" remote="nasgor-crdroid" revision="5422d818bd900d4e37a3745603c1d47920a0f968" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_packages_services_Telecomm" path="packages/services/Telecomm" />
+  <!-- In-call vibration settings backend -->
+  <project path="packages/services/Telecomm" name="crdroidandroid/android_packages_services_Telecomm" remote="nasgor-crdroid" revision="b042e145da8cfb6fe6c351f968e1187a2d13ef0c" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_packages_services_Telephony" path="packages/services/Telephony" />
+  <!-- Network indicator settings backend -->
+  <project path="packages/services/Telephony" name="crdroidandroid/android_packages_services_Telephony" remote="nasgor-crdroid" revision="b04c5bee0eb82e1ef0e1c6243b7a3cc630649a5a" upstream="refs/heads/17.0" />
+  <!-- SystemUI rendering dependency -->
+  <project path="external/FadingEdgeLayout" name="crdroidandroid/android_external_FadingEdgeLayout" remote="nasgor-crdroid" revision="0165827a1c0c7076faa236fb01dcd5f877595ecf" upstream="refs/heads/17.0" />
+  <!-- Shared libraries and optional style resources only -->
+  <project path="vendor/addons" name="crdroidandroid/android_vendor_addons" remote="nasgor-crdroid" revision="9cb99ad7ce256c71aa849ecf1f127196edbde32b" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_device_lineage_sepolicy" path="device/lineage/sepolicy" />
+  <!-- Policies for customization services -->
+  <project path="device/lineage/sepolicy" name="crdroidandroid/android_device_crdroid_sepolicy" remote="nasgor-crdroid" revision="4e01647ad427797e1398697c9ae1cb11eb68fda4" upstream="refs/heads/17.0" />
+  <remove-project name="LineageOS/android_system_sepolicy" path="system/sepolicy" />
+  <!-- Framework policy compatibility -->
+  <project path="system/sepolicy" name="crdroidandroid/android_system_sepolicy" remote="nasgor-crdroid" revision="6453de8f2aaa9f797a19ff10a5bc5543575d9199" upstream="refs/heads/17.0" />
+  <!-- App sandbox lock-screen dependency -->
+  <project path="packages/apps/AppLocker" name="crdroidandroid/android_packages_apps_AppLocker" remote="nasgor-crdroid" revision="065f2f5553bcf297fe503b28ef15433447df92a5" upstream="refs/heads/17.0" />
+  <!-- Weather provider resources, matching the upstream Android 17 manifest -->
+  <project path="packages/resources/apps" name="crdroidandroid/android_packages_resources_apps" remote="nasgor-crdroid" revision="08e798a9bf8d4617eae05a390127e417c44baef4" upstream="refs/heads/16.0" />
+  <!-- Keep Lineage overlays; patches remove duplicate addon font modules. -->
+  <remove-project name="LineageOS/android_packages_overlays_Lineage" path="packages/overlays/Lineage" />
+  <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" remote="nasgor-crdroid" revision="9e5784b30e406feca0b424ce2adda39adacc1612" upstream="refs/heads/lineage-24.0" />
+</manifest>

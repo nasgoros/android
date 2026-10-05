@@ -7,4 +7,6 @@
   </project>
   <project path="packages/apps/NasgorSettings" name="nasgoros/android_packages_apps_NasgorSettings" revision="refs/heads/17.0" />
 
+  <include name="snippets/nasgor-crdroid.xml" />
+
 </manifest>
