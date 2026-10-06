@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Recovery file manager; retain the Lineage UI and installer. -->
+  <remove-project name="LineageOS/android_bootable_recovery" path="bootable/recovery" />
+  <project path="bootable/recovery" name="nasgoros/android_bootable_recovery" revision="refs/heads/17.0" />
+
   <!-- nasgorOS additions -->
   <project path="vendor/nasgoros" name="nasgoros/android_vendor_nasgoros" revision="refs/heads/17.0" >
     <linkfile src="product.mk" dest="vendor/extra/product.mk" />
