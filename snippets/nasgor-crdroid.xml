@@ -72,4 +72,7 @@
   <remove-project name="LineageOS/android_packages_apps_WallpaperPicker2" path="packages/apps/WallpaperPicker2" />
   <!-- Keep the Lineage wallpaper app with the crDroid shared-settings interface adaptation. -->
   <project path="packages/apps/WallpaperPicker2" name="LineageOS/android_packages_apps_WallpaperPicker2" remote="nasgor-crdroid" revision="faf11f2e8e1e36b07e3163831d34190ab7187265" upstream="refs/heads/lineage-24.0" />
+  <!-- Keep Lineage build tools with the LMOFreeform bootclasspath namespace adaptation. -->
+  <remove-project name="LineageOS/android_build_soong" path="build/soong" />
+  <project path="build/soong" name="LineageOS/android_build_soong" remote="nasgor-crdroid" revision="5ea236479501d50a4a0eafb568f4f35d1bdda3cb" upstream="refs/heads/lineage-24.0" />
 </manifest>
