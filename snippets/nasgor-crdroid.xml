@@ -40,12 +40,8 @@
   <project path="packages/apps/ThemeStore" name="crdroidandroid/android_packages_apps_ThemeStore" remote="nasgor-crdroid" revision="2bc5b64cf95bd65a1175dc998ff027862649b8ea" upstream="refs/heads/17.0" />
   <!-- Sidebar and freeform settings dependency -->
   <project path="packages/apps/LMOFreeform" name="crdroidandroid/android_packages_apps_LMOFreeform" remote="nasgor-crdroid" revision="246622d65e29c1d3e5fa0e221b6f0926a6990343" upstream="refs/heads/17.0" />
-  <!-- App sandbox framework service and settings -->
-  <project path="packages/apps/Sandbox" name="crdroidandroid/android_packages_apps_Sandbox" remote="nasgor-crdroid" revision="149b72cbe1409501cb104f6e4e20e5ae316596f9" upstream="refs/heads/17.0" />
   <!-- Lockscreen smartspace dependency -->
   <project path="packages/services/QuickLook" name="crdroidandroid/android_packages_services_QuickLook" remote="nasgor-crdroid" revision="dda4e5a58d6f987abb3c19a7e73c639f02412d6a" upstream="refs/heads/17.0" />
-  <!-- Weather settings provider -->
-  <project path="packages/services/OmniJaws" name="crdroidandroid/android_packages_services_OmniJaws" remote="nasgor-crdroid" revision="5422d818bd900d4e37a3745603c1d47920a0f968" upstream="refs/heads/17.0" />
   <remove-project name="LineageOS/android_packages_services_Telecomm" path="packages/services/Telecomm" />
   <!-- In-call vibration settings backend -->
   <project path="packages/services/Telecomm" name="crdroidandroid/android_packages_services_Telecomm" remote="nasgor-crdroid" revision="b042e145da8cfb6fe6c351f968e1187a2d13ef0c" upstream="refs/heads/17.0" />
@@ -62,10 +58,6 @@
   <remove-project name="LineageOS/android_system_sepolicy" path="system/sepolicy" />
   <!-- Framework policy compatibility -->
   <project path="system/sepolicy" name="crdroidandroid/android_system_sepolicy" remote="nasgor-crdroid" revision="6453de8f2aaa9f797a19ff10a5bc5543575d9199" upstream="refs/heads/17.0" />
-  <!-- App sandbox lock-screen dependency -->
-  <project path="packages/apps/AppLocker" name="crdroidandroid/android_packages_apps_AppLocker" remote="nasgor-crdroid" revision="065f2f5553bcf297fe503b28ef15433447df92a5" upstream="refs/heads/17.0" />
-  <!-- Weather provider resources, matching the upstream Android 17 manifest -->
-  <project path="packages/resources/apps" name="crdroidandroid/android_packages_resources_apps" remote="nasgor-crdroid" revision="08e798a9bf8d4617eae05a390127e417c44baef4" upstream="refs/heads/16.0" />
   <!-- Keep Lineage overlays; patches remove duplicate addon font modules. -->
   <remove-project name="LineageOS/android_packages_overlays_Lineage" path="packages/overlays/Lineage" />
   <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" remote="nasgor-crdroid" revision="9e5784b30e406feca0b424ce2adda39adacc1612" upstream="refs/heads/lineage-24.0" />
