@@ -5,6 +5,11 @@
   <remove-project name="LineageOS/android_bootable_recovery" path="bootable/recovery" />
   <project path="bootable/recovery" name="nasgoros/android_bootable_recovery" revision="refs/heads/17.0" />
 
+  <!-- First boot uses AOSP Provision; the fork only drops LineageSetupWizard's
+       override of Provision. -->
+  <remove-project name="LineageOS/android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" />
+  <project path="packages/apps/SetupWizard" name="nasgoros/android_packages_apps_SetupWizard" revision="refs/heads/17.0" />
+
   <!-- nasgorOS additions -->
   <project path="vendor/nasgoros" name="nasgoros/android_vendor_nasgoros" revision="refs/heads/17.0" >
     <linkfile src="product.mk" dest="vendor/extra/product.mk" />
