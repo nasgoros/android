@@ -4,6 +4,10 @@
   <remote name="nasgor-crdroid" fetch="https://github.com/" />
   <remote name="nasgor-crdroid-gitlab" fetch="https://gitlab.com/" />
 
+  <!-- Keep Lineage hardware settings; NasgorOS patches remove Contributors Cloud. -->
+  <remove-project name="LineageOS/android_packages_apps_LineageParts" path="packages/apps/LineageParts" />
+  <project path="packages/apps/LineageParts" name="LineageOS/android_packages_apps_LineageParts" remote="nasgor-crdroid" revision="9ca30fbbf4aa0d3cc2afa750ba56eaf65a5e4712" upstream="refs/heads/lineage-24.0" />
+
   <remove-project name="LineageOS/android_frameworks_av" path="frameworks/av" />
   <!-- Per-app audio volume backend and camera/TIFF extensions used by frameworks/base -->
   <project path="frameworks/av" name="crdroidandroid/android_frameworks_av" remote="nasgor-crdroid" revision="9bc64d559bcfb2f7992c68cc93fd41f15fee9936" upstream="refs/heads/17.0" />
