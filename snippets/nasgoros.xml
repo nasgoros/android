@@ -13,6 +13,7 @@
   <!-- nasgorOS additions -->
   <project path="vendor/nasgoros" name="nasgoros/android_vendor_nasgoros" revision="refs/heads/17.0" >
     <linkfile src="product.mk" dest="vendor/extra/product.mk" />
+    <linkfile src="BoardConfigExtra.mk" dest="vendor/extra/BoardConfigExtra.mk" />
   </project>
   <project path="packages/apps/NasgorSettings" name="nasgoros/android_packages_apps_NasgorSettings" revision="refs/heads/17.0" />
 
