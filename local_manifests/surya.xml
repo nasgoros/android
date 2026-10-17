@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Poco X3 NFC (surya)
+  Copy to .repo/local_manifests/surya.xml before running repo sync.
+  LineageOS stops at lineage-22.2 for surya; these forks carry the port to 17.0.
+-->
+<manifest>
+
+  <!-- Device -->
+  <project path="device/xiaomi/surya" name="nasgoros/android_device_xiaomi_surya" revision="refs/heads/17.0" />
+
+  <!-- Kernel (fork of wahyu6070/surya-kernel: KernelSU-Next + SUSFS) -->
+  <project path="kernel/xiaomi/surya" name="nasgoros/android_kernel_xiaomi_surya" revision="refs/heads/17.0" />
+
+  <!-- Proprietary blobs (fork of TheMuppets lineage-22.2) -->
+  <project path="vendor/xiaomi/surya" name="nasgoros/proprietary_vendor_xiaomi_surya" revision="refs/heads/17.0" />
+
+  <!-- Xiaomi hardware (from LineageOS) -->
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" />
+
+</manifest>
